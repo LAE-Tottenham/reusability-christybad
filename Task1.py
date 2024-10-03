@@ -1,6 +1,14 @@
 # Help! My code is too messy :( Please help me organise it and extract out the duplications.
 
 # Define your reusable functions here:
+import math
+
+def calc(pOpp, pAdj):
+    # work out the hyp
+    pHyp = math.sqrt(pOpp**2 + pAdj**2)
+    return pHyp
+
+
 # Make sure each function only does ONE thing!!!!!!!!!!!
 
 
@@ -12,23 +20,18 @@ def weird_calculation():
     opp1 = float(input("Enter your first triangle's opposite side length: "))
     adj1 = float(input("Enter your first triangle's adjacent side length: "))
 
-    # work out the hyp
-    import math
-    hyp1 = math.sqrt(opp1**2 + adj1**2)
+    calc(opp1,adj1)
 
     # get the length and width of the second triangle from the user
     opp2 = float(input("Enter your second triangle's opposite side length: "))
     adj2 = float(input("Enter your second triangle's adjacent side length: "))
 
-    # work out the hyp
-    import math
-    hyp2 = math.sqrt(opp2**2 + adj2**2)
+    calc(opp2,adj2)
 
     # create a third triangle with the hyp1 as the opp and hyp2 as the adj
-    opp3 = hyp1
-    adj3 = hyp2
+    opp3 = calc(opp1,adj1)
+    adj3 = calc(opp2,adj2)
     
-    import math
     hyp3 = math.sqrt(opp3**2 + adj3**2)
     return hyp3
 
