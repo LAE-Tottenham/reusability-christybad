@@ -8,7 +8,13 @@ def calc(pOpp, pAdj):
     pHyp = math.sqrt(pOpp**2 + pAdj**2)
     return pHyp
 
-def validate_input():
+def validate_input(value):
+    while True:
+        if value <= 0:
+            value = float(input('enter a valid number: '))
+        else:
+            break
+    return value
     
 
 
@@ -20,14 +26,21 @@ def validate_input():
 
 def weird_calculation():
     # get the length and width of the first triangle from the user
+    
     opp1 = float(input("Enter your first triangle's opposite side length: "))
+    validate_input(opp1)
+    
     adj1 = float(input("Enter your first triangle's adjacent side length: "))
-
+    validate_input(adj1)
+    
     calc(opp1,adj1)
 
     # get the length and width of the second triangle from the user
     opp2 = float(input("Enter your second triangle's opposite side length: "))
+    validate_input(opp2)
+    
     adj2 = float(input("Enter your second triangle's adjacent side length: "))
+    validate_input(adj2)
 
     calc(opp2,adj2)
 
@@ -45,10 +58,11 @@ print(weird_answer)
 # After you have written the reusable functions, answer the following:
 # Questions:
 # 1. What are the preconditions for your code not to break?
-# the user must enter float values
 # the values must be positive
 # 2. Validate the user's input based on your preconditions.
 # 3. Why was it useful to use reusable components in this case? Please mention at least 2 reasons and don't forget to contextualise.
+# so that the calculations to find the hypotoneuse doesn't have to be rewritten each time
+# i dont have to test each time that the line of codes to find the hypotenouse work which increases code reliablity
 
 # Further Tasks:
 # 1. Put your functions in seperate appropriate files and import them in.
