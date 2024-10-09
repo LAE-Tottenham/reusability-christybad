@@ -7,7 +7,7 @@ from functions import *
 # Make sure each function only does ONE thing!!!!!!!!!!!
 
 ###########################################
-
+weird_answer = 0.0
 def weird_calculation():
     # get the length and width of the first triangle from the user
     
@@ -35,8 +35,18 @@ def weird_calculation():
     hyp3 = math.sqrt(opp3**2 + adj3**2)
     return hyp3
 
-weird_answer = weird_calculation()
-print(weird_answer)
+choice = input('enter a for pythogras b for SOHCAHTOA c for sine rule or d for cosine rule : ')
+if choice == 'a':
+    weird_answer = weird_calculation()
+    print(weird_answer)
+    
+if choice == 'b':
+    
+if choice == 'c':
+if choice == 'd':
+
+
+
 
 
 # After you have written the reusable functions, answer the following:
