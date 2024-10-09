@@ -8,6 +8,9 @@ def calc(pOpp, pAdj):
     pHyp = math.sqrt(pOpp**2 + pAdj**2)
     return pHyp
 
+def validate_input():
+    
+
 
 # Make sure each function only does ONE thing!!!!!!!!!!!
 
@@ -42,6 +45,8 @@ print(weird_answer)
 # After you have written the reusable functions, answer the following:
 # Questions:
 # 1. What are the preconditions for your code not to break?
+# the user must enter float values
+# the values must be positive
 # 2. Validate the user's input based on your preconditions.
 # 3. Why was it useful to use reusable components in this case? Please mention at least 2 reasons and don't forget to contextualise.
 
