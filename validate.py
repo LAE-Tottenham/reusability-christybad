@@ -6,3 +6,9 @@ def validate_input(value):
         else:
             break
     return value
+
+def calc(pOpp, pAdj):
+    # work out the hyp
+    pHyp = math.sqrt(pOpp**2 + pAdj**2)
+    return pHyp
+
